@@ -5,8 +5,8 @@ using UnityEngine;
 public class spawnManger : MonoBehaviour
 {
     public GameObject[] itemPrefabs;
-    float SpawnRangeX = 20;
-    float spawnPosZ = 35;
+    float SpawnRangeX = 8;
+    float spawnPosZ = 8;
     public float startingSpawn = 5; 
     public float spawnTiming = 1.5f;
     
@@ -21,7 +21,7 @@ public class spawnManger : MonoBehaviour
 
     {
         
-        Vector3 spawnPos = new Vector3(Random.Range(-SpawnRangeX, SpawnRangeX), 0, spawnPosZ); 
+        Vector3 spawnPos = new Vector3(Random.Range(-SpawnRangeX, SpawnRangeX), 10, Random.Range(-spawnPosZ, spawnPosZ)); 
             
             int itemIndex = Random.Range(0, itemPrefabs.Length); 
             

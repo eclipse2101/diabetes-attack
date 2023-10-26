@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
    public float hInput; 
    public float speed = 6; 
    public CharacterController  player;
+   public int score;
    
     // Start is called before the first frame update
     void Start()

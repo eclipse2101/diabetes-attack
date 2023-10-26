@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 5847732490333496231}
   - component: {fileID: 991100613761649419}
   - component: {fileID: 4084221875858916609}
+  - component: {fileID: -7749687291653220660}
+  - component: {fileID: 4375112159570056742}
+  - component: {fileID: -7182441068457799615}
   m_Layer: 0
   m_Name: candy 1
   m_TagString: Untagged
@@ -90,8 +93,52 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69736571130712927}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-7749687291653220660
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69736571130712927}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 2.88
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4375112159570056742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69736571130712927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f633a1bca32547d38c86ead781caaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottomBound: 1
+--- !u!114 &-7182441068457799615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69736571130712927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcb50d4067224ccea4d7444894a8a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badItem: 0
+  goodScore: 1
+  badScore: -1
