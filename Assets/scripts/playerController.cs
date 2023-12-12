@@ -9,11 +9,18 @@ public class playerController : MonoBehaviour
    public float speed = 6; 
    public CharacterController  player;
    public int score;
+   private AudioSource playerAudio;
+   public AudioClip BadSound; 
+   public AudioClip GoodSound;
+
+
+  
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudio = GetComponent<AudioSource>();
+     
     }
 
     // Update is called once per frame
@@ -25,4 +32,18 @@ public class playerController : MonoBehaviour
         Vector3 direction = new Vector3(hInput, 0f, vInput).normalized;
         player.Move(direction.normalized * speed * Time.deltaTime);
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+       if (other.gameObject.CompareTag("good item"))
+       {
+          playerAudio.PlayOneShot(BadSound, 1.0f);
+
+       }
+       else if (other.gameObject.CompareTag("bad item"))
+       {
+         playerAudio.PlayOneShot(GoodSound, 1.0f); 
+       }
+    }
+    
 }
