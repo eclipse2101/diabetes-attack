@@ -8,20 +8,14 @@ public class pointScore : MonoBehaviour
   public int goodScore = 1;
   public int badScore = -1; 
   ScoreDisplay scoreDisplay;
-   private AudioSource playerAudio;
 
-   public AudioClip BadSound; 
-   public AudioClip GoodSound;
 
   void Awake()
   {
     scoreDisplay = GameObject.Find("Canvas").GetComponent<ScoreDisplay>();
   }
 
-   void Start()
-    {
-      playerAudio = GetComponent<AudioSource>();
-    }
+ 
     void OnTriggerEnter(Collider other)
     {
         
@@ -32,7 +26,7 @@ public class pointScore : MonoBehaviour
            scoreDisplay.DisplayScore(pc.score.ToString());
            Destroy(gameObject);
            Debug.Log(pc.score);
-           playerAudio.PlayOneShot(BadSound, 1.0f);
+          
         }
         else
         {
@@ -41,7 +35,7 @@ public class pointScore : MonoBehaviour
             scoreDisplay.DisplayScore(pc.score.ToString());
              Destroy(gameObject);
             Debug.Log(pc.score);
-            playerAudio.PlayOneShot(GoodSound, 1.0f); 
+            
         }
     }
 }

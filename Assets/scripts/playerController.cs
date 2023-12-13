@@ -33,16 +33,18 @@ public class playerController : MonoBehaviour
         player.Move(direction.normalized * speed * Time.deltaTime);
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
        if (other.gameObject.CompareTag("good item"))
        {
-          playerAudio.PlayOneShot(BadSound, 1.0f);
-
+          Debug.Log("yippe");
+          playerAudio.PlayOneShot(GoodSound, 1.0f);
        }
-       else if (other.gameObject.CompareTag("bad item"))
+       
+       else if (other.gameObject.CompareTag("boom"))
        {
-         playerAudio.PlayOneShot(GoodSound, 1.0f); 
+         Debug.Log("aw man");
+         playerAudio.PlayOneShot(BadSound, 1.0f); 
        }
     }
     
