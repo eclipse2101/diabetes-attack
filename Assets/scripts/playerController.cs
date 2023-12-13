@@ -12,6 +12,8 @@ public class playerController : MonoBehaviour
    private AudioSource playerAudio;
    public AudioClip BadSound; 
    public AudioClip GoodSound;
+   public ParticleSystem explosionParticle;
+    public ParticleSystem fireworksParticle;
 
 
   
@@ -38,12 +40,14 @@ public class playerController : MonoBehaviour
        if (other.gameObject.CompareTag("good item"))
        {
           Debug.Log("yippe");
+          fireworksParticle.Play();
           playerAudio.PlayOneShot(GoodSound, 1.0f);
        }
        
        else if (other.gameObject.CompareTag("boom"))
        {
          Debug.Log("aw man");
+         explosionParticle.Play();
          playerAudio.PlayOneShot(BadSound, 1.0f); 
        }
     }
