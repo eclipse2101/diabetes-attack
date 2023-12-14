@@ -1278,6 +1278,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1668993964341386557, guid: eff75fb1c8a354e79977eeb8fd98ec80,
         type: 3}
+      propertyPath: xRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668993964341386557, guid: eff75fb1c8a354e79977eeb8fd98ec80,
+        type: 3}
+      propertyPath: yRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668993964341386557, guid: eff75fb1c8a354e79977eeb8fd98ec80,
+        type: 3}
+      propertyPath: zRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668993964341386557, guid: eff75fb1c8a354e79977eeb8fd98ec80,
+        type: 3}
       propertyPath: BadSound
       value: 
       objectReference: {fileID: 8300000, guid: a565b51cf9e6b4a39a9f2604451c61ee, type: 3}

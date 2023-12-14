@@ -14,6 +14,8 @@ public class playerController : MonoBehaviour
    public AudioClip GoodSound;
    public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
+    public float xRange;
+    public float zRange; 
 
 
   
@@ -33,6 +35,27 @@ public class playerController : MonoBehaviour
        
         Vector3 direction = new Vector3(hInput, 0f, vInput).normalized;
         player.Move(direction.normalized * speed * Time.deltaTime);
+
+        //// Borders////
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.z < -zRange)
+        {
+            transform.position = new Vector3( transform.position.x, transform.position.y, -zRange);
+        }
+
+        if (transform.position.z > zRange)
+        {
+            transform.position = new Vector3( transform.position.x, transform.position.y, -zRange);
+        }
     }
 
     void OnTriggerEnter(Collider other)
